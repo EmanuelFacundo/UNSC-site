@@ -1,0 +1,132 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #373b44; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4286f4, #415279); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4286f4, #415279); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.hamburguer {
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 10px;
+
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer:after {
+    content: "";
+    width: 70%;
+    height: 5%;
+
+    background-color: #e6e0e0;
+    border-radius: 50px;
+
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.hamburguer::before {
+    content: "";
+    width: 50%;
+    height: 5%;
+
+    background-color: #e6e0e0;
+    border-radius: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+        margin-left: 10px;        
+        a {
+            width: 90px;
+            display: block;
+            border-bottom: #33648c 5px solid;
+            padding: 2px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #eee;
+            transition: 0.5s ease;
+            &:hover {
+                background-color: #33648c70;
+                color: #ccc;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .hamburguer {
+        background-color: blue;
+        border: 25px;
+        margin-right: 10px;
+        padding: 5px;
+        display: block;
+        z-index: 999;
+    }
+
+    .menu {
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        background-color: #123cf7;
+        flex-direction: column;
+        padding: 100px 20px;
+        width: 100%;
+        max-width: 150px;
+    }
+    
+    .menu.active {
+        padding: 100px 20px;
+        right: 0;
+        a{
+            padding: 5px;
+            border-bottom: none;
+        }
+    }
+}
