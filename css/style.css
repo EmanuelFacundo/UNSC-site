@@ -1,5 +1,5 @@
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif !important;
   margin: 0%;
   padding: 0%;
   width: 100%;
@@ -8,11 +8,10 @@ body {
 
 header {
   width: 100%;
-  height: 100px;
+  height: 120px;
   padding: 10px 20px;
   position: fixed;
   top: 0;
-  z-index: 999;
   background: #373b44;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -23,7 +22,96 @@ header {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.navbar {
+.container {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.myCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.myCardI {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+}
+
+.myCardI .conteudo {
+  text-align: left;
+  margin: 10px;
+  padding: 50px 10px;
+  height: 100%;
+  border-radius: 5px;
+  border-width: 100%;
+  border-left: #33648c6c 5px solid;
+  border-bottom: #33648c6c 5px solid;
+  padding-right: 10px;
+  min-width: 300px;
+  width: 50%;
+}
+
+.myCardI img {
+  padding: 5px;
+  margin: 0 50px 0 50px;
+  max-width: 400px;
+}
+
+.myCardP {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.myCardP .conteudo {
+  text-align: right;
+  margin: 10px;
+  padding: 50px 10px;
+  height: 100%;
+  border-radius: 5px;
+  border-width: 100%;
+  border-right: #33648c6c 5px solid;
+  border-bottom: #33648c6c 5px solid;
+  padding-right: 10px;
+  min-width: 300px;
+  width: 50%;
+}
+
+.myCardP img {
+  padding: 5px;
+  margin: 0 50px 0 50px;
+  max-width: 400px;
+}
+
+.myNavbar {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -39,12 +127,12 @@ header {
           align-items: center;
 }
 
-.logo img {
+.myLogo img {
   width: 100px;
   height: 100px;
 }
 
-.hamburguer {
+.myHamburguer {
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -54,7 +142,7 @@ header {
   display: none;
 }
 
-.hamburguer:after {
+.myHamburguer:after {
   content: "";
   width: 70%;
   height: 5%;
@@ -65,7 +153,7 @@ header {
   left: 15%;
 }
 
-.hamburguer::before {
+.myHamburguer::before {
   content: "";
   width: 50%;
   height: 5%;
@@ -76,7 +164,7 @@ header {
   left: 35%;
 }
 
-.menu {
+.myMenu {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,12 +174,14 @@ header {
           align-items: center;
 }
 
-.menu li {
+.myMenu li {
   margin-left: 10px;
 }
 
-.menu li a {
-  width: 90px;
+.myMenu li a {
+  text-justify: auto;
+  font-size: 14px;
+  width: 120px;
   display: block;
   border-bottom: #33648c 5px solid;
   padding: 2px 15px;
@@ -102,21 +192,60 @@ header {
   transition: 0.5s ease;
 }
 
-.menu li a:hover {
+.myMenu li a:hover {
   background-color: #33648c70;
   color: #ccc;
 }
 
+@media screen and (max-width: 860px) {
+  .myCardI {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    border-radius: 5px;
+    border-width: 100%;
+    border-left: #33648c6c 5px solid;
+    border-bottom: #33648c6c 5px solid;
+  }
+  .myCardI .conteudo {
+    border: none;
+  }
+  .myCardI img {
+    max-height: 220px;
+  }
+  .myCardP {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    border-radius: 5px;
+    border-width: 100%;
+    border-right: #33648c6c 5px solid;
+    border-bottom: #33648c6c 5px solid;
+  }
+  .myCardP .conteudo {
+    border: none;
+  }
+  .myCardP img {
+    max-height: 220px;
+  }
+}
+
 @media screen and (max-width: 980px) {
-  .hamburguer {
-    background-color: blue;
+  .myHamburguer {
+    background-color: #33648c;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
     border: 25px;
     margin-right: 10px;
     padding: 5px;
     display: block;
     z-index: 999;
   }
-  .menu {
+  .myMenu {
     margin: 0 auto;
     position: fixed;
     top: 0;
@@ -130,12 +259,17 @@ header {
     padding: 100px 20px;
     width: 100%;
     max-width: 150px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
-  .menu.active {
-    padding: 100px 20px;
+  .myMenu li a {
+    padding: 5px;
+    border-bottom: none;
+  }
+  .myMenu.active {
     right: 0;
   }
-  .menu.active a {
+  .myMenu.active a {
     padding: 5px;
     border-bottom: none;
   }
