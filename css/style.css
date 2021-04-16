@@ -1,23 +1,26 @@
+p {
+  font-weight: 100;
+}
+
+h1, h2 {
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
+h2 {
+  margin-bottom: 10px !important;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif !important;
-  margin: 0%;
-  padding: 0%;
-  width: 100%;
-  height: 100vh;
 }
 
 header {
   width: 100%;
-  height: 120px;
-  padding: 10px 20px;
+  height: 100px;
   position: fixed;
   top: 0;
-  background: #373b44;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left bottom, left top, from(#4286f4), to(#415279));
-  background: linear-gradient(to top, #4286f4, #415279);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #314396;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -128,7 +131,8 @@ header {
 }
 
 .myLogo img {
-  width: 100px;
+  margin-top: -10px !important;
+  width: 186px;
   height: 100px;
 }
 
@@ -165,6 +169,7 @@ header {
 }
 
 .myMenu {
+  color: white;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,9 +186,9 @@ header {
 .myMenu li a {
   text-justify: auto;
   font-size: 14px;
-  width: 120px;
+  width: 100px;
   display: block;
-  border-bottom: #33648c 5px solid;
+  border-bottom: 5px solid transparent;
   padding: 2px 15px;
   text-align: center;
   text-decoration: none;
@@ -193,7 +198,7 @@ header {
 }
 
 .myMenu li a:hover {
-  background-color: #33648c70;
+  border-bottom: #3ac4c6 5px solid;
   color: #ccc;
 }
 

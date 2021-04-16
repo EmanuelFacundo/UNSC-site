@@ -25,38 +25,60 @@
 <body>
     <header>
         <div class="myNavbar">
-            <div class="myLogo"><a href="#"><img src="../images/LogoPNG.png" alt="Logo UNSC"></a></div>
+            <div class="myLogo">
+                <a href="#"><img src="../images/Logo2PNG.png" alt="Logo UNSC"></a>
+            </div>
             <div class="myHamburguer" onclick="hambuguer()"></div>
             <ul id="myMenu" class="myMenu">
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Convênio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servico">Serviços</a></li>
+                <li><a href="#convenio">Convênio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
     </header>
-    <div class="container ">
-        <h1>Serviços</h1>
-        <div class="myCards">
-            <!-- Psicologia -->
-            <div class="myCardI">
-                <div class="conteudo">
-                    <h1>Psicologia</h1>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type specimen book. . </p>
-                </div>
-                <img src="../images/adulto.jpg" alt="">
-            </div>
-            <!-- Nutrição -->
-            <div class="myCardP">
-                <img src="../images/medico.jpg" alt="Sala medica">
-                <div class="conteudo">
-                    <h1>Nutrição</h1>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type specimen book.  </p>
+
+    <div class="scroll"></div>
+
+    <div class="container">
+        <section class="sobre" id="sobre">
+            <h1>Sobre nós</h1>
+            <div class="myCards">
+                <div class="myCardI">
+                    <div class="conteudo">
+                        <h2>Uniclinica Santa Clara</h2>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer
+                            took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="servico" id="servico">
+            <h1>Serviços</h1>
+            <div class="myCards">
+                <!-- Psicologia -->
+                <div class="myCardI">
+                    <div class="conteudo">
+                        <h2>Psicologia</h2>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer
+                            took a galley of type and scrambled it to make a type specimen book. . </p>
+                    </div>
+                    <img src="../images/adulto.jpg" alt="">
+                </div>
+                <!-- Nutrição -->
+                <div class="myCardP">
+                    <img src="../images/medico.jpg" alt="Sala medica">
+                    <div class="conteudo">
+                        <h2>Nutrição</h2>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer
+                            took a galley of type and scrambled it to make a type specimen book. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="../js/index.js"></script>
 </body>
